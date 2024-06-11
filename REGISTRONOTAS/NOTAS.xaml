@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPEDRAZAT2.REGISTRONOTAS.NOTAS"
+             Title="NOTAS">
+    <StackLayout Padding="20">
+        <!-- Picker para seleccionar el nombre del estudiante -->
+        <Label Text="Nombre del Estudiante:" />
+        <Picker x:Name="StudentPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Juan Pedraza</x:String>
+                    <x:String>Hector Asqui</x:String>
+                    <x:String>Kristin Gualpa</x:String>
+                    <x:String>David Caballero</x:String>
+                    <x:String>Diana Capa</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Nota Seguimiento 1 -->
+        <Label Text="Nota Seguimiento 1 (sobre 10):" />
+        <Entry x:Name="NotaSeguimiento1Entry" Keyboard="Numeric" />
+
+        <!-- Examen 1 -->
+        <Label Text="Examen 1 (sobre 10):" />
+        <Entry x:Name="Examen1Entry" Keyboard="Numeric" />
+
+        <!-- Nota Seguimiento 2 -->
+        <Label Text="Nota Seguimiento 2 (sobre 10):" />
+        <Entry x:Name="NotaSeguimiento2Entry" Keyboard="Numeric" />
+
+        <!-- Examen 2 -->
+        <Label Text="Examen 2 (sobre 10):" />
+        <Entry x:Name="Examen2Entry" Keyboard="Numeric" />
+
+        <!-- DatePicker para seleccionar la fecha -->
+        <Label Text="Fecha:" />
+        <DatePicker x:Name="FechaDatePicker" />
+
+        <!-- Botón para calcular la nota final -->
+        <Button Text="Calcular Nota Final" Clicked="OnCalculateButtonClicked" />
+    </StackLayout>
+</ContentPage>
